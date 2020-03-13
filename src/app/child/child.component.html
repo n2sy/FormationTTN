@@ -1,0 +1,9 @@
+<div class="cl" [style.backgroundColor] = "color">
+  Color is {{ color }}
+</div>
+
+<input #cl1 type="text" class="form-control" [(ngModel)] = "color">
+
+<button class="btn btn-info" (click)="MsgToParent()">
+  Button  
+</button>

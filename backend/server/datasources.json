@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mydb": {
+    "host": "localhost",
+    "port": 8889,
+    "url": "",
+    "database": "Softway2019",
+    "password": "root",
+    "name": "mydb",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

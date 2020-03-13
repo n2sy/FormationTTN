@@ -1,0 +1,26 @@
+
+<div class="container" >
+  <div class="alert alert-danger" *ngIf="erreur">
+    Probléme de connexion au serveur !</div>
+  <form #addForm="ngForm" (ngSubmit)="addPersonne(addForm)">
+    <!-- <input ngModel hidden type="text" class="form-control" id="id" name="id"> -->
+    <label for="nom">Nom</label>
+    <input ngModel #nom="ngModel" required type="text" class="form-control" id="nom" name="nom">
+  
+    <label *ngIf="!nom.invalid" for="prenom">Prénom</label>
+    <input *ngIf="!nom.invalid" ngModel #prenom="ngModel" required type="text" class="form-control" id="prenom" name="prenom">
+  
+    <label  for="age">Age</label>
+    <input ngModel #age="ngModel" required type="number" class="form-control" id="age" name="age">
+  
+    <label for="profession">Profession</label>
+    <input ngModel #profession="ngModel" required type="text" class="form-control" id="profession" name="profession">
+  
+    <label  for="path">Url de l'avatar</label>
+    <input ngModel type="text" class="form-control" id="path" name="path">
+
+    <button [disabled]="!addForm.valid" class="btn btn-primary" >
+      Ajouter CV
+    </button> 
+  </form>
+  </div>

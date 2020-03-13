@@ -1,0 +1,22 @@
+<div [hidden] = "'true'" [style.backgroundColor] = "'pink'">
+  Cours d'Angular
+</div>
+
+<button class="btn btn-primary" (click) = "swipeHd()">
+  Show / Hide
+</button>
+
+<br><br>
+
+
+
+<!-- <input #cl type="text" class="form-control" (change) = "changeColor(cl.value)"> -->
+
+<br><br>
+
+<app-child [color] = "valeur" (sendReq)="TraitementParent($event)"></app-child>
+
+
+
+
+

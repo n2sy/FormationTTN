@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-liste [listePersonne]="cvPersonne" (sendReq)="takePersonneFromListe($event)"></app-liste>
+    </div>
+    <div class="col-md-8">
+      <app-detail *ngIf="cvSelecPersonne" [detailPersonne]="cvSelecPersonne"></app-detail>
+    </div>
+  </div>
+</div>
+<app-recruter></app-recruter>

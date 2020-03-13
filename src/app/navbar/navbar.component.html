@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Projet Angular</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]= "['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]= "['cv']" routerLinkActive="active">CV Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]= "['cv/add']" routerLinkActive="active">Add CV</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]= "['color']" routerLinkActive="active">Color</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]= "['word']" routerLinkActive="active">Mini Word</a>
+      </li>
+      <li class="nav-item" *ngIf="!auth.isLogged()">
+        <a class="nav-link" [routerLink]= "['login']" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="auth.isLogged()">
+        <a class="nav-link" (click)="Logout()">Logout</a>
+      </li>
+    </ul>
+  
+  </div>
+</nav>

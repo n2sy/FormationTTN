@@ -1,0 +1,23 @@
+<div [ngStyle] = "{
+  'color' : color,
+  'backgroundColor' : bgcolor,
+  'font-family' : font
+}" >
+  Ceci est un exemple de directive
+</div>
+
+<div class="cl" [ngClass] = "{
+  'c1' : cls1,
+  'c2' : cls2,
+  'c3' : cls3
+}" >
+  Ceci est un exemple de ngClass
+</div>
+
+<button class="btn btn-danger" (click)="changeClass()">
+  Change Style
+</button>
+
+<div class="cl" appCustomDir>
+  Exemple de directive personnalisés
+</div>

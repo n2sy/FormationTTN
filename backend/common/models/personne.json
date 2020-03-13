@@ -1,0 +1,44 @@
+{
+  "name": "Personne",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "prenom": {
+      "type": "string",
+      "required": true
+    },
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    },
+    "profession": {
+      "type": "string",
+      "required": true
+    },
+    "path": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

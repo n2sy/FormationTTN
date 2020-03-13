@@ -1,0 +1,10 @@
+<h1>Projet de Formation Angular pour TTN</h1>
+<br><hr><br>
+
+<button class="btn btn-primary" (click)="goCv()">Go To CVs</button>
+<button class="btn btn-info" (click)="goColor()">Go To Color</button>
+<button class="btn btn-danger" (click)="goWord()">Go To Word</button>
+
+<select #rt (change)="changeRoute(rt)">
+  <option *ngFor="let route of listeRoute" [value]="route">{{route}}</option>
+</select>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="alert alert-danger" *ngIf="erreur">
+    Email et/ou Mot de passe invalides</div>
+  <form #f="ngForm">
+    <label for="email">Email</label>
+    <input required email ngModel type="text" class="form-control" name="email" id="email">
+    <label for="pwd">Mot de passe</label>
+    <input required ngModel minlength="6" type="text" class="form-control" name="password" id="pwd">
+    <button class="btn btn-primary" (click)="Connect(f.value)">Se Connecter</button>
+  </form>
+</div>

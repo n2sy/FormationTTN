@@ -1,0 +1,22 @@
+<input type="text" class="form-control" [ngStyle]="{
+  'backgroundColor': bgColor,
+  'color' : color,
+  'fontSize' : size,
+  'fontFamily' : font
+}">
+<br>
+<h4>Background Color </h4>
+<input type="text" class="form-control" [(ngModel)]="bgColor">
+
+<h4>Text Color </h4>
+<input type="text" class="form-control" [(ngModel)]="color">
+
+<h4>Font Size</h4>
+<input #sz type="number" class="form-control" value="12" (change)="changeSize(sz)" >
+
+<h4>Font </h4>
+<select [(ngModel)]="font">
+  <option *ngFor="let item of listeFonts" [value]="item">{{item}}</option>
+</select>
+<br><br>
+<button class="btn btn-warning" (click)="goToCv()">Go to CVs</button>

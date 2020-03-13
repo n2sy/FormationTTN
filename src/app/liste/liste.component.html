@@ -1,0 +1,3 @@
+<ol>
+  <app-item *ngFor="let person of listePersonne" [personne]="person" (sendReq)="takePersonnefromItem($event)" (click)="sendPersonneToCvP()"></app-item>
+</ol>
