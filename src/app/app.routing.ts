@@ -13,7 +13,7 @@ import { LogoutGuard } from './logout.guard';
 
 const routes : Routes = [
     {path:'', component: HomeComponent},
-    {path:'cv', children:[
+    {path:'cv', component:CvComponent, children:[
         {path:'', component: CvComponent},
         {path:'add', component: AddComponent, canActivate:[LoginGuard]},
         {path:':id', component: InfosComponent},
